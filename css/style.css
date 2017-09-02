@@ -85,3 +85,15 @@ footer {
   -webkit-flex-direction: row;
   -webkit-justify-content: center;
 }
+
+.note {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+}
+.note:focus {
+  outline: none;
+}

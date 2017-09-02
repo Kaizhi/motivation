@@ -11,6 +11,14 @@ var App = function($el){
     'submit', this.submit.bind(this)
   );
 
+  if (localStorage) {
+    var $note = document.querySelector('.note');
+    $note.addEventListener('input', function(evt) {
+      localStorage.setItem('note', evt.target.innerHTML);
+    });
+    $note.innerHTML = localStorage.getItem('note');
+  }
+
   if (this.dob) {
     this.renderAgeLoop();
   } else {
